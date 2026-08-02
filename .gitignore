@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+data/vector_db/
+data/raw/*.pdf
+experiments/results/*.json
+.DS_Store

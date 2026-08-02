@@ -1,0 +1,12 @@
+pymupdf>=1.24.0
+sentence-transformers==3.0.1
+chromadb>=0.5.0
+rank-bm25==0.2.2
+fastapi==0.112.0
+uvicorn==0.30.5
+streamlit==1.37.1
+anthropic==0.34.0
+matplotlib==3.9.1
+python-dotenv==1.0.1
+pydantic==2.8.2
+tiktoken==0.7.0
