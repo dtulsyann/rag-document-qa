@@ -4,12 +4,30 @@ Keep every tunable parameter here so experiments only need to change
 values in one place (or override via the ExperimentConfig in experiments/).
 """
 import os
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from dotenv import load_dotenv
 
 load_dotenv()
 
+# API Keys -- only fill in the one for your chosen provider
 ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
+OPENAI_API_KEY    = os.getenv("OPENAI_API_KEY", "")
+GEMINI_API_KEY    = os.getenv("GEMINI_API_KEY", "")
+GROQ_API_KEY      = os.getenv("GROQ_API_KEY", "")
+
+# Which provider to use: "anthropic" | "openai" | "gemini" | "groq"
+LLM_PROVIDER = os.getenv("LLM_PROVIDER", "gemini")
+
+_DEFAULT_MODELS = {
+    "anthropic": "claude-haiku-4-5-20251001",
+    "openai":    "gpt-4o-mini",
+    "gemini":    "gemini-2.0-flash-lite",
+    "groq":      "llama-3.1-8b-instant",
+}
+
+
+def get_default_model() -> str:
+    return _DEFAULT_MODELS.get(LLM_PROVIDER, _DEFAULT_MODELS["gemini"])
 
 # Paths
 DATA_DIR = "data"
@@ -32,8 +50,6 @@ RERANK_CANDIDATE_K = 20   # how many candidates to pull before reranking
 RERANKER_MODEL_NAME = "cross-encoder/ms-marco-MiniLM-L-6-v2"
 
 # Generation
-LLM_MODEL_EVAL = "claude-haiku-4-5-20251001"   # cheap, used for eval loops
-LLM_MODEL_DEMO = "claude-sonnet-4-6"            # higher quality, used for demo/app
 MAX_TOKENS = 1000
 
 
@@ -48,5 +64,5 @@ class PipelineConfig:
     search_strategy: str = "dense"        # "dense" | "hybrid"
     use_reranker: bool = False
     top_k: int = TOP_K
-    llm_model: str = LLM_MODEL_EVAL
+    llm_model: str = None                 # None -> uses get_default_model()
     collection_name: str = "baseline"     # keeps each experiment's vectors isolated
