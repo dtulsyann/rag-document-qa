@@ -19,6 +19,8 @@ When you make a claim, cite which source it came from using the format [Source N
 
 If the context does not contain enough information to answer the question,
 respond exactly with: "The document does not contain enough information to answer this question."
+
+Format your answer using proper Markdown. If listing items, you MUST use bullet points starting with "-" and put each item on its own new line.
 """
 
 
