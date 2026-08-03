@@ -1,5 +1,5 @@
 """
-Phase 2 (baseline): Fixed-size token chunking with overlap.
+Fixed-size token chunking with overlap.
 
 Splits each page's text into chunks of ~CHUNK_SIZE tokens, with
 CHUNK_OVERLAP tokens shared between consecutive chunks so context isn't

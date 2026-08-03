@@ -1,5 +1,5 @@
 """
-Phase 1: PDF Ingestion.
+PDF Ingestion.
 
 Extracts text from a PDF, page by page, and tags every page with
 metadata (filename, page_number). This metadata is the seed for every

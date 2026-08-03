@@ -1,5 +1,5 @@
 """
-Phase 4: Baseline dense retrieval (pure vector similarity search).
+Baseline dense retrieval (pure vector similarity search).
 """
 from app.embeddings.embedder import embed_query
 from app.vectorstore.chroma_store import query as vector_query

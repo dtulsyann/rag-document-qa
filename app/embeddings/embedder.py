@@ -1,5 +1,5 @@
 """
-Phase 3: Embeddings.
+Embeddings.
 
 Thin wrapper around sentence-transformers so the rest of the codebase
 never touches the model directly -- swapping embedding models later

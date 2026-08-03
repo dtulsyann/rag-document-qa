@@ -1,8 +1,34 @@
-.venv/
-__pycache__/
-*.pyc
+# Environment & Secrets
 .env
+.env*.local
+
+# Virtual Environment
+.venv/
+env/
+venv/
+
+# Python Caches & Artifacts
+**/__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+.mypy_cache/
+.ipynb_checkpoints/
+*.log
+
+# Project Data & Vector DBs
 data/vector_db/
-data/raw/*.pdf
-experiments/results/*.json
+data/raw/*
+!data/raw/.gitkeep
+
+# Experiment Results
+experiments/results/*
+!experiments/results/.gitkeep
+
+# Editor & OS Files
+.vscode/
+.idea/
 .DS_Store
+Thumbs.db
+desktop.ini

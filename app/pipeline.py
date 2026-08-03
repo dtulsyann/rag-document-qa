@@ -1,5 +1,5 @@
 """
-Phase 4: Pipeline orchestrator.
+Pipeline orchestrator.
 
 This is the SINGLE SOURCE OF TRUTH for "ask a question, get an answer".
 Both app/main.py (the live FastAPI app) and evaluation/evaluator.py
