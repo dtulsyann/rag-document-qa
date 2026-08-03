@@ -1,0 +1,858 @@
+{
+  "experiment_name": "exp3_reranker",
+  "config": {
+    "chunking_strategy": "fixed",
+    "search_strategy": "dense",
+    "use_reranker": true,
+    "top_k": 5
+  },
+  "timestamp": "2026-08-03T12:17:42.621886+00:00",
+  "aggregate_metrics": {
+    "hit_rate": 0.8571428571428571,
+    "mrr": 0.7452380952380953,
+    "avg_recall": 0.8214285714285714,
+    "n_questions": 28
+  },
+  "per_question_results": [
+    {
+      "id": "q1",
+      "question": "What is the department's vision statement?",
+      "hit": 1,
+      "reciprocal_rank": 1.0,
+      "recall": 1.0,
+      "answer": "To evolve as an internationally recognised centre of excellence for teaching and research in computer science and engineering with societal and industry relevance. [Source 1]",
+      "retrieved_pages": [
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 2
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 146
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 194
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 54
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 76
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "What is the total minimum number of credits required to complete the B.Tech programme in Computer Science and Engineering?",
+      "hit": 1,
+      "reciprocal_rank": 1.0,
+      "recall": 1.0,
+      "answer": "The total minimum credits required for completing the B. Tech. programme in Computer Science and Engineering is 159. [Source 1: B.Tech-CSE-2022.pdf, page 3]",
+      "retrieved_pages": [
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 3
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 11
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 14
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 4
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 13
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "question": "How many credits are allocated to Programme Core (PC) courses?",
+      "hit": 1,
+      "reciprocal_rank": 0.5,
+      "recall": 1.0,
+      "answer": "According to the given context, the number of credits allocated to Programme Core (PC) courses is not explicitly stated in a single number. However, it can be broken down as follows:\n\n- From [Source 2], minimum Programme Core (PC) courses are 15, with a minimum of 4 programme core courses being 4 credits each [Source 2].\n- From [Source 5], Programme Core (PC) courses are 3 credits each for CSPC62 and CSPC63, and 4 credits for CSPC62 as well in [Source 4].\n\nThe actual number of Programme Core (PC) courses and their respective credits are scattered throughout different documents. However, considering [Source 2] and the minimum programme credits requirement, Programme Core (PC) courses can be calculated as follows:\n\n- From [Source 2], Minimum Programme Core (PC) courses are 15\n- From [Source 3], Programme Core XIV / Compiler Design is 4 credits [Source 3]\n- From [Source 4], Programme Core VI / Formal Languages and Automata Theory is 4 credits, Programme Core VII / Design and Analysis of Algorithms is 3 credits, and Programme Core VIII / Operating Systems is 3 credits [Source 4].\n- From [Source 5], Programme Core IX / Computer Architecture is 4 credits, Programme Core X / Database Management Systems is 3 credits, Programme Core XI / Computer Networks is 3 credits, Programme Core XII / Introduction to Artificial Intelligence and Machine Learning is 4 credits, Programme Core XIII / Embedded Systems Architectures is 3 credits, Programme Core XIV / Compiler Design is 4 credits, and Programme Core XV / Principles of Cryptography is 3 credits.\n\nTherefore, Programme Core (PC) courses have the following number of credits: 4, 3, and 4.\n\nThe document does not contain enough information to state the total number of Programme Core (PC) courses and their respective credits.",
+      "retrieved_pages": [
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 12
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 3
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 13
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 13
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 14
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "question": "How many credits are allocated to General Institute Requirement (GIR) courses?",
+      "hit": 1,
+      "reciprocal_rank": 1.0,
+      "recall": 1.0,
+      "answer": "- 22 credits (from Table 1 Course Structure in [Source 1])\n- 31.25% of the total credits (from Table 1 Course Structure in [Source 1])\n- Each course in Table 2 GIR Courses has its own maximum credits (ranging from 2 to 10 credits) [Source 1]\n- Energy and Environmental Engineering (ENIR11) has 2 credits (from Semester wise Curriculum Structure in [Source 4])\n- Linear Algebra and Calculus (MAIR12) has 3 credits (from Semester wise Curriculum Structure in [Source 4])\n- Physics (PHIR11) has 3 credits (from Semester wise Curriculum Structure in [Source 4])\n- Physics Lab (PHIR12) has 2 credits (from Semester wise Curriculum Structure in [Source 4])\n- Introduction to Computer Programming (CSIR11) has 3 credits (from Semester wise Curriculum Structure in [Source 4])\n- Basic Engineering (CEIR11) has 2 credits (from Semester wise Curriculum Structure in [Source 4])\n- Professional Ethics (CSIR21) has 2 credits (from Semester II (January Session) in [Source 4])\n- Engineering Graphics (MEIR12) has 3 credits (from Semester II (January Session) in [Source 4])\n- Summer Internship has 2 credits (from Semester VII (July Session) in [Source 3] and Semester III (July Session) is not present but CSIR11 in Source 4 is not the same Summer Internship but the same summer internship code is CSIR71 with 2 credits as per Source 5, this could clarify any ambiguity, and 1 additional credit is allocated for compulsory participation in NSS/ NCC/ NSO (SWIR11) (from Semester II (January Session) in [Source 4])\n- English for Communication (HSIR11) has 2 credits (from Semester II (January Session) in [Source 4])\n \nNote: The credit distribution can be inferred from the given tables and curriculum structures for specific courses.",
+      "retrieved_pages": [
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 3
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 4
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 14
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 12
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 6
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "question": "How many credits are required for Essential Laboratory Requirements (ELR)?",
+      "hit": 1,
+      "reciprocal_rank": 1.0,
+      "recall": 1.0,
+      "answer": "- 8 credits \n[Source 1: B.Tech-CSE-2022.pdf, page 3]\n\nNote: \nTotal ELR credits are mentioned as \"8\" in the 'Total' row under the 'Essential Laboratory Requirements (ELR)' category in Table 1 Course Structure.",
+      "retrieved_pages": [
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 3
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 10
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 12
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 13
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 4
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "question": "How many credits of Mathematics courses are required under GIR?",
+      "hit": 1,
+      "reciprocal_rank": 0.2,
+      "recall": 1.0,
+      "answer": "The total minimum credits required for GIR courses is 50 [Source 1]. \n\nAmong the given GIR courses, only three Mathematics courses are mentioned: \n- Linear Algebra and Calculus (3 credits) [Source 5]\n- Complex Analysis and Differential Equations (3 credits) [Source 5]\n- Mathematics III - Probability and Operations Research (4 credits) [Source 2 and Source 5]\n\nAdding these credits, the total number of Mathematics credits required under GIR is 3 + 3 + 4 = 10 credits [Source 5].\n\nTherefore, the total number of Mathematics credits required under GIR is 10.",
+      "retrieved_pages": [
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 3
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 23
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 12
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 14
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 4
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "question": "What is the course code for Physics Lab?",
+      "hit": 0,
+      "reciprocal_rank": 0.0,
+      "recall": 0.0,
+      "answer": "The document does not contain enough information to answer this question.",
+      "retrieved_pages": [
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 53
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 43
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 13
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 5
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 21
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "question": "How many credits is English for Communication worth?",
+      "hit": 1,
+      "reciprocal_rank": 1.0,
+      "recall": 1.0,
+      "answer": "- 4 credits [Source 1]",
+      "retrieved_pages": [
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 5
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 109
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 14
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 135
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 121
+        }
+      ]
+    },
+    {
+      "id": "q9",
+      "question": "What is the minimum duration of the summer internship required?",
+      "hit": 1,
+      "reciprocal_rank": 1.0,
+      "recall": 1.0,
+      "answer": "The minimum duration of the summer internship required is two months. [Source 1]",
+      "retrieved_pages": [
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 6
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 14
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 3
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 12
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 10
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "question": "How many lectures are required for the Industrial Lecture course, and how many credits is it worth?",
+      "hit": 1,
+      "reciprocal_rank": 0.5,
+      "recall": 1.0,
+      "answer": "According to the given context, \n- The Industrial Lecture course is worth 1 credit.  \n- The total number of lectures is 5. \n\n[Source 1, page 4: Comprehensive Viva is worth 16 credits, but it does not provide information about the Industrial Lecture. However, this is not relevant to answering the question as the context is focused on general institute requirements. The answer actually comes from the following context: ] \n\n[Source 2, page 6: A course based on industrial lectures shall be offered for 1 credit. A minimum of five lectures of two hours duration by industry experts will be arranged by the Department.]\n\n[Source 2, page 6]",
+      "retrieved_pages": [
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 4
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 6
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 13
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 3
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 175
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "question": "List all the Programme Core courses offered in the curriculum.",
+      "hit": 1,
+      "reciprocal_rank": 1.0,
+      "recall": 0.5,
+      "answer": "- Programme Core I / Discrete Structures [CSPC11]\n- Programme Core II / Principles of Programming Languages [CSPC31]\n- Programme Core IV / Digital Systems Design [CSPC33]\n- Programme Core III / Data Structures [CSPC32]\n- Programme Core V / Computer Organization [CSPC34]\n- Programme Core VI / Formal Languages and Automata Theory [CSPC41]\n- Programme Core VII / Design and Analysis of Algorithms [CSPC42]\n- Programme Core VIII / Operating Systems [CSPC43]\n- Programme Core IX / Computer Architecture [CSPC51]\n- Programme Core X / Database Management Systems [CSPC52]",
+      "retrieved_pages": [
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 7
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 15
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 12
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 124
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 49
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "question": "What is the course code for Computer Organization?",
+      "hit": 1,
+      "reciprocal_rank": 1.0,
+      "recall": 0.5,
+      "answer": "- CSPC34 [Source 1]\n- CSMI12 [Source 2]",
+      "retrieved_pages": [
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 31
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 149
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 27
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 48
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 21
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "question": "How many Open Elective courses are listed?",
+      "hit": 0,
+      "reciprocal_rank": 0.0,
+      "recall": 0.0,
+      "answer": "- CSPE31 - Linear Algebra and Applications is not an Open Elective course (listed in [Source 1: B.Tech-CSE-2022.pdf, page 15]; Source 1)\n  It is a Programme Elective course.\n\n- CSPE32 - Combinatorics and Graph Theory is not an Open Elective course (listed in [Source 1: B.Tech-CSE-2022.pdf, page 15]; Source 1)\n  It is a Programme Elective course.\n\n- CSPE41 - Software Engineering is not an Open Elective course (listed in [Source 1: B.Tech-CSE-2022.pdf, page 15]; Source 1)\n  It is a Programme Elective course.\n\n- CSPE42 - Design Thinking is not an Open Elective course (listed in [Source 1: B.Tech-CSE-2022.pdf, page 15]; Source 1)\n  It is a Programme Elective course.\n\n- CSPE43 - Advanced Data Structures and Algorithms is not an Open Elective course (listed in [Source 1: B.Tech-CSE-2022.pdf, page 15]; Source 1)\n  It is a Programme Elective course.\n\n- CSPE44 - Computer Graphics is not an Open Elective course (listed in [Source 1: B.Tech-CSE-2022.pdf, page 15]; Source 1)\n  It is a Programme Elective course.\n\n- CSPE45 - Multimedia Systems is not an Open Elective course (listed in [Source 1: B.Tech-CSE-2022.pdf, page 15]; Source 1)\n  It is a Programme Elective course.\n\n- CSPE46 - Computing Algorithms based on Indian Knowledge Systems is not an Open Elective course (listed in [Source 1: B.Tech-CSE-2022.pdf, page 15]; Source 1)\n  It is a Programme Elective course.\n\n- CSPE51 - Augmented and Virtual Reality is not an Open Elective course (listed in [Source 1: B.Tech-CSE-2022.pdf, page 15]; Source 1)\n  It is a Programme Elective course.\n\n- CSPE52 - Digital Signal Processing is not an Open Elective course (listed in [Source 1: B.Tech-CSE-2022.pdf, page 15]; Source 1)\n  It is a Programme Elective course.\n\n- CSPE53 - Game Theory is not an Open Elective course (listed in [Source 1: B.Tech-CSE-2022.pdf, page 15]; Source 1)\n  It is a Programme Elective course.\n\n- CSPE54 - Real Time Systems is not an Open Elective course (listed in [Source 1: B.Tech-CSE-2022.pdf, page 15]; Source 1)\n  It is a Programme Elective course.\n\n- CSPE55 - Software Testing and Automation is not an Open Elective course (listed in [Source 1: B.Tech-CSE-2022.pdf, page 15]; Source 1)\n  It is a Programme Elective course.\n\n- CSPE56 - Cloud Computing is not an Open Elective course (listed in [Source 1: B.Tech-CSE-2022.pdf, page 15]; Source 1)\n  It is a Programme Elective course.\n\n- CSPE57 - Agile Software Development is not an Open Elective course (listed in [Source 1: B.Tech-CSE-2022.pdf, page 15]; Source 1)\n  It is a Programme Elective course.\n\n- CSPE58 - Data Interpretation and Analysis is not an Open Elective course (listed in [Source 1: B.Tech-CSE-2022.pdf, page 15]; Source 1)\n  It is a Programme Elective course.\n\n- CSPE6 is not listed, so it is not an Open Elective course.\n\n- CSPE7 is not listed, so it is not an Open Elective course.\n\n- CSPE8 - Elective VI is listed as PE/OE in [Source 4: B.Tech-CSE-2022.pdf, page 13]; Source 4)\n  It is listed in VII semester in [Source 3: B.Tech-CSE-2022.pdf, page 12] however this page says 'Elective I'\n  It is a Programme Elective/Open Elective course.\n\n- CSPE9 - Elective VII is listed as PE/OE in [Source 4: B.Tech-CSE-2022.pdf, page 13]; Source 4)\n  It is listed in VII semester in [Source 3: B.Tech-CSE-2022.pdf, page 12] however this page",
+      "retrieved_pages": [
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 15
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 14
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 12
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 13
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 4
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "question": "How many Essential Laboratory Requirement (ELR) courses are there, and how many credits is each worth?",
+      "hit": 1,
+      "reciprocal_rank": 1.0,
+      "recall": 1.0,
+      "answer": "There are 8 Essential Laboratory Requirement (ELR) courses listed.\n\n- CSLR31 Laboratory I / Data structures Laboratory [Source 1]\n- CSLR32 Laboratory II / Digital Laboratory [Source 1]\n- CSLR41 Laboratory III / Algorithms Laboratory [Source 1]\n- CSLR42 Laboratory IV / Operating Systems Lab [Source 1]\n- CSLR51 Laboratory V / Database Management Systems Laboratory [Source 1]\n- CSLR52 Laboratory VI / Networks Laboratory [Source 1]\n- CSLR61 Laboratory VII / Embedded Systems Laboratory [Source 3]\n- CSLR62 Laboratory VIII / App Development Laboratory [Source 3]\n\nEach of the ELR courses is worth 2 credits.",
+      "retrieved_pages": [
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 10
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 12
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 13
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 4
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 14
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "question": "List the Minor (MI) courses offered by the department.",
+      "hit": 0,
+      "reciprocal_rank": 0.0,
+      "recall": 0.0,
+      "answer": "- CSMI14 / Database Management Systems [Source 5]\nThe document does not contain enough information to determine if there are any other Minor (MI) courses offered by the department.",
+      "retrieved_pages": [
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 12
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 14
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 13
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 4
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 153
+        }
+      ]
+    },
+    {
+      "id": "q16",
+      "question": "List the advanced level courses available for B.Tech (Honours).",
+      "hit": 1,
+      "reciprocal_rank": 1.0,
+      "recall": 1.0,
+      "answer": "- CSHO11 Software Defined Networking [Source 1]\n- CSHO12 Distributed Systems [Source 1]\n- CSHO13 Multi-Core Programming [Source 1]\n- CSHO14 Pervasive and Ubiquitous Computing [Source 1]\n- CSHO15 Middleware Technologies [Source 1]\n- CSHO16 Randomized Algorithms [Source 1]\n- CSHO17 Big Data Mining [Source 1]\n- CSHO18 Modelling and Simulation [Source 1]\n- CSHO19 Quantum Computing [Source 1]",
+      "retrieved_pages": [
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 11
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 3
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 15
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 14
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 4
+        }
+      ]
+    },
+    {
+      "id": "q17",
+      "question": "List all the courses offered in Semester I.",
+      "hit": 1,
+      "reciprocal_rank": 1.0,
+      "recall": 1.0,
+      "answer": "- ENIR11 - Energy and Environmental Engineering (2)\n- MAIR12 - Linear Algebra and Calculus (3)\n- PHIR11 - Physics (3)\n- PHIR12 - Physics Lab (2)\n- CSIR11 - Introduction to Computer Programming (Theory & Lab) (3)\n- MEIR11 - Basics of Mechanical Engineering (2)\n- CEIR11 - Basics of Civil Engineering (2)\n- PRIR11 - Engineering Practice (2)",
+      "retrieved_pages": [
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 12
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 15
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 13
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 14
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 4
+        }
+      ]
+    },
+    {
+      "id": "q18",
+      "question": "What is the total credit count for Semester III?",
+      "hit": 0,
+      "reciprocal_rank": 0.0,
+      "recall": 0.0,
+      "answer": "The document does not contain enough information to answer this question.\n\nHowever, we can see that the total credit count for Semester III is listed in the table on page 14 (Source 1): 19, 21, 24. However, there are at least three Semesters before Semester III in Semester I, II, III.",
+      "retrieved_pages": [
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 13
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 14
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 27
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 13
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 43
+        }
+      ]
+    },
+    {
+      "id": "q19",
+      "question": "Which programme core courses are offered in Semester IV?",
+      "hit": 1,
+      "reciprocal_rank": 1.0,
+      "recall": 1.0,
+      "answer": "- CSPC41 - Programme Core VI / Formal Languages and Automata Theory [Source 1]\n- CSPC42 - Programme Core VII / Design and Analysis of Algorithms [Source 1]\n- CSPC43 - Programme Core VIII / Operating Systems [Source 1]",
+      "retrieved_pages": [
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 13
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 12
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 14
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 11
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 4
+        }
+      ]
+    },
+    {
+      "id": "q20",
+      "question": "How many total credits does Semester VII carry?",
+      "hit": 1,
+      "reciprocal_rank": 1.0,
+      "recall": 1.0,
+      "answer": "- Semester VII carries a total of 14 credits [Source 1: B.Tech-CSE-2022.pdf, page 14].",
+      "retrieved_pages": [
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 14
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 13
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 13
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 12
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 4
+        }
+      ]
+    },
+    {
+      "id": "q21",
+      "question": "What courses make up Semester VIII, and how many credits total?",
+      "hit": 1,
+      "reciprocal_rank": 1.0,
+      "recall": 1.0,
+      "answer": "- CSIR81 - Comprehensive Viva-Voce - 1 credit [Source 1]\n- CSIR82 - Project Work / Equivalent No. of Electives - 6 credits [Source 1]\n- Elective XII - 3 credits [Source 1]\n- Elective XIII - 3 credits [Source 1]\n- Elective XIV - 3 credits [Source 1]\n \nTotal credits for Semester VIII = 1 + 6 + 3 + 3 + 3 = 16 credits [Source 1]",
+      "retrieved_pages": [
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 14
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 13
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 12
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 4
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 12
+        }
+      ]
+    },
+    {
+      "id": "q22",
+      "question": "How many additional credits are required for a Minor degree?",
+      "hit": 1,
+      "reciprocal_rank": 0.3333333333333333,
+      "recall": 1.0,
+      "answer": "- 15 credits [Source 3]",
+      "retrieved_pages": [
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 3
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 12
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 14
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 4
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 13
+        }
+      ]
+    },
+    {
+      "id": "q23",
+      "question": "How many additional credits are required for an Honours degree, and is the project work compulsory?",
+      "hit": 1,
+      "reciprocal_rank": 1.0,
+      "recall": 1.0,
+      "answer": "According to [Source 2: B.Tech-CSE-2022.pdf, page 3], the total minimum credits required for completing the B. Tech. programme in Computer Science and Engineering is 159.\n \nAccording to [Source 2: B.Tech-CSE-2022.pdf, page 3], the minimum credit requirement for the B. Tech. programme is as follows:\n \n- General Institute Requirement (GIR) Courses: 159 - 50% = 79.5 credits (rounded to 78.5), however the GIR has 22 credits which already exist, but since the document states  50% the GIRs must make up, but in total we have 50% which is actually 79.5. So the 78.5 number isn't accurate. We have 22 as GIR credits already, so  79.5 - 22 =  57.5. So the remaining for 50% is actually 57.5 not 78.5.\n \nHowever according to  [Source 2: B.Tech-CSE-2022.pdf, page 3], the total required for programme core courses is 15 credits, and out of which 4 must be 4 credits each is required. So total credits for programme core courses is 15 with some of these being 4 credit courses. Therefore the remaining for programme core is 60 - 15 = 45 for all the 1 and 2 credits courses.\n \nFor Programme Electives (PE)/ Open Electives (OE) the requirement is at least eight programme elective courses (PE) which is 8 * 3 = 24 credits, however in total programme electives/ open electives have a requirement of 14 credits [Source 1, Page 14]. This means there are 24 - 14 = 10 additional programme electives (not including the honour programme electives).\n \nHowever this is not the question asked. The question asked is about additional credits required for the Honour degree. According to [Source 2: B.Tech-CSE-2022.pdf, page 3] the honour programme has 15 additional credits.\n\nAs for the project work being compulsory or not, according to [Source 2: B.Tech-CSE-2022.pdf, page 3] the project work is compulsory for those pursuing the programme, however for Honours degree the project is not compulsory according to [Source 4: B.Tech-CSE-2022.pdf, page 4]. This does not directly say it is not compulsory but rather that it \"is not compulsory\", so we know it's not compulsary at least.",
+      "retrieved_pages": [
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 14
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 3
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 13
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 4
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 11
+        }
+      ]
+    },
+    {
+      "id": "q24",
+      "question": "What is the credit distribution across all 8 semesters?",
+      "hit": 1,
+      "reciprocal_rank": 1.0,
+      "recall": 1.0,
+      "answer": "Credit Distribution Across All 8 Semesters\n- Semester I: 19 credits [Source 1]\n- Semester II: 21 credits [Source 1]\n- Semester III: 24 credits [Source 1]\n- Semester IV: 23 credits [Source 2]\n- Semester V: 24 credits [Source 2]\n- Semester VI: 24 credits (no specific credit distribution given) [Source 2]\n- Semester VII: 14 credits [Source 1]\n- Semester VIII: 10 credits [Source 1]\n- General Institute Requirements: 25 credits (sum of 10 credits from MATHEMATICS, 5 credits from PHYSICS, 5 credits from CHEMISTRY, and 5 credits from HUMANITIES) [Source 3]\nNote that the General Institute Requirements are not categorized by semester. Hence, we cannot attribute it to any specific semester.",
+      "retrieved_pages": [
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 14
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 13
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 4
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 12
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 13
+        }
+      ]
+    },
+    {
+      "id": "q25",
+      "question": "What are the prerequisites for Design and Analysis of Algorithms (CSPC42), and how many credits is it worth?",
+      "hit": 1,
+      "reciprocal_rank": 1.0,
+      "recall": 1.0,
+      "answer": "- CSPC32 [Source 1]\nNumber of Credits: 3-0-0-3 [Source 1]",
+      "retrieved_pages": [
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 38
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 42
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 175
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 27
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 43
+        }
+      ]
+    },
+    {
+      "id": "q26",
+      "question": "Does the Operating Systems course (CSPC43) have any prerequisites?",
+      "hit": 1,
+      "reciprocal_rank": 0.3333333333333333,
+      "recall": 1.0,
+      "answer": "No.\n\n[Source 1, Section: Pre-requisites (Course Code) has a hyphen \"-\" which implies it is empty or does not have any prerequisites.]",
+      "retrieved_pages": [
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 43
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 44
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 40
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 31
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 151
+        }
+      ]
+    },
+    {
+      "id": "q27",
+      "question": "What is the prerequisite for Computer Architecture (CSPC51), and what are its course objectives?",
+      "hit": 1,
+      "reciprocal_rank": 1.0,
+      "recall": 1.0,
+      "answer": "The prerequisite for Computer Architecture (CSPC51) is CSPE34 [Source 5].\n\nThe course objectives of Computer Architecture (CSPC51) are:\n- To understand the concept of advanced pipelining techniques\n- To understand the current state of art in memory system design\n- To know the working principle of I/O devices\n- To understand the memory management techniques\n  [Source 1]",
+      "retrieved_pages": [
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 44
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 129
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 55
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 165
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 31
+        }
+      ]
+    },
+    {
+      "id": "q28",
+      "question": "What is the prerequisite and credit structure for Introduction to Artificial Intelligence and Machine Learning (CSPC54)?",
+      "hit": 1,
+      "reciprocal_rank": 1.0,
+      "recall": 1.0,
+      "answer": "* Number of Credits: 3-0-2-4 [Source 1]\n* Pre-requisites (Course Code): CSPC11 [Source 1]",
+      "retrieved_pages": [
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 50
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 8
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 107
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 159
+        },
+        {
+          "filename": "B.Tech-CSE-2022.pdf",
+          "page": 27
+        }
+      ]
+    }
+  ]
+}

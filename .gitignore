@@ -22,9 +22,8 @@ data/vector_db/
 data/raw/*
 !data/raw/.gitkeep
 
-# Experiment Results
-experiments/results/*
-!experiments/results/.gitkeep
+# Experiment 
+experiments/results/graphs/
 
 # Editor & OS Files
 .vscode/

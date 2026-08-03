@@ -72,7 +72,7 @@ def _generate_gemini(prompt: str, model: str) -> str:
 def _generate_groq(prompt: str, model: str) -> str:
     from groq import Groq
     from app.config import GROQ_API_KEY
-    client = Groq(api_key=GROQ_API_KEY)
+    client = Groq(api_key=GROQ_API_KEY, max_retries=10)
     response = client.chat.completions.create(
         model=model,
         max_tokens=MAX_TOKENS,

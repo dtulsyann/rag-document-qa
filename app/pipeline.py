@@ -52,6 +52,30 @@ def answer_question(question: str, config: PipelineConfig = None) -> RAGResult:
     config = config or PipelineConfig()
 
     chunks = _retrieve_chunks(question, config)
+
+    # Parent-child: swap each chunk's text with its parent's text for
+    # generation (retrieval already used the precise child text to find
+    # these chunks -- this swap only affects what goes into the prompt).
+    chunks = _retrieve_chunks(question, config)
+
+    # Parent-child: swap each chunk's text with its parent's text for
+    # generation. If multiple retrieved children share the same parent,
+    # deduplicate so that parent's text is only included ONCE in the
+    # prompt -- otherwise the same large parent block gets repeated,
+    # wasting tokens (and can blow past model context/rate limits).
+    if config.chunking_strategy == "parent_child":
+        seen_parent_ids = set()
+        deduped_chunks = []
+        for c in chunks:
+            parent_id = c.get("parent_id")
+            if parent_id and parent_id in seen_parent_ids:
+                continue  # skip -- this parent's text is already included
+            if parent_id:
+                seen_parent_ids.add(parent_id)
+            swapped = {**c, "text": c["parent_text"]} if c.get("parent_text") else c
+            deduped_chunks.append(swapped)
+        chunks = deduped_chunks
+
     prompt = build_prompt(question, chunks)
     answer_text = generate(prompt, model=config.llm_model)
 
@@ -81,6 +105,9 @@ def ingest_pdf(pdf_path: str, config: PipelineConfig = None):
     if config.chunking_strategy == "fixed":
         from app.chunking.fixed import chunk_pages
         chunks = chunk_pages(pages)
+    elif config.chunking_strategy == "parent_child":
+        from app.chunking.parent_child import chunk_pages_parent_child
+        chunks = chunk_pages_parent_child(pages)
     else:
         raise ValueError(f"Unknown chunking_strategy: {config.chunking_strategy}")
 

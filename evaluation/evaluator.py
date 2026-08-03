@@ -1,5 +1,5 @@
 """
-Phase 6: Evaluation harness.
+Evaluation harness.
 
 Reuses app.pipeline.answer_question() -- the exact same function the live
 FastAPI app calls. This guarantees eval numbers reflect real user behavior;

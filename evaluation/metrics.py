@@ -1,5 +1,5 @@
 """
-Phase 6: Retrieval evaluation metrics.
+Retrieval evaluation metrics.
 
 Hand-rolled (not RAGAS) so every formula is transparent and explainable.
 A "match" between a retrieved chunk and a ground-truth source is defined
