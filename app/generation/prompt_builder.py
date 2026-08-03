@@ -15,7 +15,7 @@ GROUNDING_INSTRUCTIONS = """You are a document question-answering assistant.
 Answer the question using ONLY the context provided below. Do not use any
 outside knowledge, and do not speculate or fill gaps with assumptions.
 
-When you make a claim, cite which source it came from using the format [Source N].
+When you make a claim or list an item, you MUST cite which source it came from using the exact format [Source N] at the end of the sentence or bullet point. Do not skip this.
 
 If the context does not contain enough information to answer the question,
 respond exactly with: "The document does not contain enough information to answer this question."

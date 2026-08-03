@@ -1,5 +1,5 @@
 """
-Phase 3: Vector store.
+Vector store.
 
 Thin wrapper around ChromaDB. Notice we're using Chroma's raw client
 API directly (not a LangChain VectorStore abstraction) -- ids, embeddings,
