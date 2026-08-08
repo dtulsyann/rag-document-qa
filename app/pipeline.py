@@ -30,14 +30,18 @@ class RAGResult:
 def _retrieve_chunks(question: str, config: PipelineConfig) -> list[dict]:
     """
     Dispatches to the correct retrieval strategy based on config.
-    Experiments 2 (hybrid) and 3 (reranker) plug in here later --
-    for now only dense retrieval (the baseline) is wired up.
     """
+    # If using reranker, we need a larger initial pool of candidates
+    fetch_k = config.top_k
+    if config.use_reranker:
+        from app.config import RERANK_CANDIDATE_K
+        fetch_k = RERANK_CANDIDATE_K
+
     if config.search_strategy == "dense":
-        chunks = dense_retrieve(question, k=config.top_k, collection_name=config.collection_name)
+        chunks = dense_retrieve(question, k=fetch_k, collection_name=config.collection_name)
     elif config.search_strategy == "hybrid":
         from app.retrieval.hybrid import retrieve as hybrid_retrieve
-        chunks = hybrid_retrieve(question, k=config.top_k, collection_name=config.collection_name)
+        chunks = hybrid_retrieve(question, k=fetch_k, collection_name=config.collection_name)
     else:
         raise ValueError(f"Unknown search_strategy: {config.search_strategy}")
 
@@ -77,7 +81,7 @@ def answer_question(question: str, config: PipelineConfig = None) -> RAGResult:
         chunks = deduped_chunks
 
     prompt = build_prompt(question, chunks)
-    answer_text = generate(prompt, model=config.llm_model)
+    answer_text = generate(prompt, model=config.llm_model, temperature=config.temperature)
 
     citations = build_citations(chunks)
     cited_numbers = extract_cited_source_numbers(answer_text)

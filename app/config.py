@@ -51,6 +51,7 @@ RERANKER_MODEL_NAME = "cross-encoder/ms-marco-MiniLM-L-6-v2"
 
 # Generation
 MAX_TOKENS = 1000
+TEMPERATURE = 0.1  # low temperature for grounded QA
 
 
 @dataclass
@@ -65,4 +66,5 @@ class PipelineConfig:
     use_reranker: bool = False
     top_k: int = TOP_K
     llm_model: str = None                 # None -> uses get_default_model()
+    temperature: float = TEMPERATURE      # low temperature for grounded generation
     collection_name: str = "baseline"     # keeps each experiment's vectors isolated
