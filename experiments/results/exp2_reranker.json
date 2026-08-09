@@ -1,5 +1,5 @@
 {
-  "experiment_name": "exp3_reranker",
+  "experiment_name": "exp2_reranker",
   "config": {
     "chunking_strategy": "fixed",
     "search_strategy": "dense",

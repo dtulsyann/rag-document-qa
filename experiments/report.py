@@ -1,5 +1,5 @@
 """
-Phase 8: Turn experiments/results/*.json into a comparison table + graphs
+Turn experiments/results/*.json into a comparison table + graphs
 for the README.
 
 Usage:
